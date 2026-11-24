@@ -1,0 +1,594 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubre Villa de Leyva</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F3EFF8;
+            color: #30263B;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #D8C5E8;
+            color: #38234D;
+            text-align: center;
+            padding: 25px;
+        }
+
+        h1 { font-family: "MS Gothic", Arial, sans-serif; }
+
+        h2 {
+            color: #62427D;
+            background-color: #E9DFF2;
+            padding: 10px;
+            border-left: 6px solid #A88BC2;
+            border-radius: 8px;
+        }
+
+        h3 { color: #76568F; }
+
+        nav {
+            background-color: #76568F;
+            text-align: center;
+            padding: 12px;
+            position: sticky;
+            top: 0;
+        }
+
+        nav a, .boton {
+            display: inline-block;
+            color: white;
+            background-color: #76568F;
+            text-decoration: none;
+            padding: 9px 14px;
+            margin: 4px;
+            border-radius: 18px;
+        }
+
+        nav a:hover, .boton:hover {
+            background-color: #513568;
+        }
+
+        main {
+            max-width: 1050px;
+            margin: auto;
+            padding: 20px;
+            background-color: white;
+        }
+
+        p { text-align: justify; }
+
+        .centrado { text-align: center; }
+
+        .foto-principal {
+            width: 85%;
+            max-width: 650px;
+            height: auto;
+            border-radius: 18px;
+            box-shadow: 6px 6px 12px #B8A5C9;
+        }
+
+        .lugar {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            margin: 22px 0;
+            padding: 15px;
+            background-color: #FBF9FD;
+            border: 1px solid #D8C5E8;
+            border-radius: 12px;
+        }
+
+        .lugar div { flex: 1; }
+
+        .lugar img {
+            width: 100%;
+            max-width: 330px;
+            height: auto;
+            border-radius: 12px;
+        }
+
+        .nota {
+            background-color: #F1EAF7;
+            border-left: 5px solid #A88BC2;
+            padding: 12px;
+            border-radius: 8px;
+        }
+
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin: 20px 0;
+        }
+
+        .espacio-imagen {
+            min-height: 180px;
+            border: 2px dashed #A88BC2;
+            border-radius: 12px;
+            background-color: #FBF9FD;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #76568F;
+            padding: 12px;
+        }
+
+        details {
+            background-color: #FBF9FD;
+            border: 1px solid #D8C5E8;
+            border-radius: 10px;
+            padding: 12px 16px;
+            margin: 12px 0;
+        }
+
+        summary {
+            color: #62427D;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        details p { margin-bottom: 4px; }
+
+        footer {
+            background-color: #513568;
+            color: white;
+            text-align: center;
+            padding: 18px;
+        }
+
+        /* BOTÓN PERSONALIZADO DEL CHATBOT */
+
+        .boton-chat {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #76568F;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 14px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 3px 3px 10px #B8A5C9;
+            z-index: 9999;
+        }
+
+        .boton-chat:hover {
+            background-color: #513568;
+        }
+
+        @media (max-width: 700px) {
+            .lugar { display: block; }
+            .lugar img { margin-top: 10px; }
+            .galeria { grid-template-columns: 1fr; }
+            nav { position: static; }
+
+            .boton-chat {
+                bottom: 15px;
+                right: 15px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header id="inicio">
+        <h1>DESCUBRE LAS MARAVILLAS DE VILLA DE LEYVA 🦖</h1>
+    </header>
+
+    <nav>
+        <a href="#historia">Historia</a>
+        <a href="#lugares">Lugares turísticos</a>
+        <a href="#naturaleza">Naturaleza</a>
+        <a href="#gastronomia">Gastronomía</a>
+        <a href="#cultura">Cultura</a>
+        <a href="#actividades">Actividades</a>
+        <a href="#visita">Planifica tu visita</a>
+        <a href="#final">Final</a>
+    </nav>
+
+    <main>
+        <h2>¿Qué bellezas se encuentran en esta región?</h2>
+        <p>Villa de Leyva está ubicada en la provincia de Ricaurte, Boyacá. Es reconocida por su arquitectura colonial, sus calles empedradas y la variedad de paisajes que la rodean. Es un destino que reúne patrimonio histórico, atractivos naturales y tradiciones boyacenses.</p>
+        <p class="centrado">
+            <img class="foto-principal" src="https://villadeleyvaextrema.com/wp-content/uploads/2020/02/plaza-mayor-villa-de-leyva-1-768x511.jpg" alt="Plaza Mayor de Villa de Leyva">
+        </p>
+
+        <h2 id="historia">Historia de Villa de Leyva</h2>
+        <p>Villa de Leyva fue fundada el 12 de junio de 1572 por orden de Andrés Díaz Venero de Leyva. Su primer asentamiento estuvo en el valle de Saquencipá, territorio que ya había sido habitado por comunidades indígenas muiscas. Debido a diferentes dificultades y a las inconformidades de los habitantes de la zona, el poblado fue trasladado posteriormente al lugar donde se encuentra actualmente.</p>
+        <p>Durante la época colonial fue un importante centro de población y conserva hasta hoy construcciones que muestran la arquitectura de ese periodo. El municipio también tuvo participación en la historia de Colombia: allí se reunió el Primer Congreso de las Provincias Unidas de la Nueva Granada, el 4 de octubre de 1812.</p>
+        <p>El 17 de diciembre de 1954, su centro histórico fue declarado Monumento Nacional, con el propósito de proteger su arquitectura y su patrimonio. Actualmente hace parte de la Red de Pueblos Patrimonio de Colombia y es uno de los destinos culturales y turísticos más conocidos de Boyacá.</p>
+        <p><strong>Dato importante:</strong> a sus habitantes se les conoce como villaleyvanos.</p>
+
+        <h2 id="lugares">Lugares turísticos que debes conocer</h2>
+
+        <div class="lugar">
+            <div>
+                <h3>Plaza Mayor</h3>
+                <p>Es el corazón del municipio y uno de sus lugares más representativos. Se caracteriza por su gran tamaño, su suelo empedrado y las construcciones coloniales que la rodean. En el centro se encuentra una pila de piedra que antiguamente servía para abastecer de agua a los habitantes.</p>
+                <p>Alrededor de la plaza hay edificios históricos, comercios y restaurantes; también es escenario de celebraciones y encuentros del municipio.</p>
+            </div>
+            <div><img src="https://images.trvl-media.com/place/6100332/1e04d56b-3ca0-4139-bfb4-16d5571f81a9.jpg" alt="Plaza Mayor"></div>
+        </div>
+
+        <div class="lugar">
+            <div>
+                <h3>Casa Terracota</h3>
+                <p>Es una construcción artística diseñada por el arquitecto colombiano Octavio Mendoza. Está elaborada principalmente con arcilla y se destaca por sus formas curvas, sus espacios creativos y sus elementos hechos con tierra cocida.</p>
+                <p>Su diseño muestra una forma particular de combinar arquitectura, creatividad y materiales naturales.</p>
+            </div>
+            <div><img src="https://cdn.baquianos.com/img/blog/2020/7/casa-de-terracota-vq2.jpg" alt="Casa Terracota"></div>
+        </div>
+
+        <div class="lugar">
+            <div>
+                <h3>Pozos Azules</h3>
+                <p>Son varios pozos artificiales que llaman la atención por sus tonalidades azules y verdosas, las cuales contrastan con el paisaje seco que los rodea. El color puede variar según la luz y las características del agua.</p>
+                <p>Es un sitio para caminar y tomar fotografías. Antes de la visita, consulta las normas de ingreso y ten presente que no se debe ingresar al agua si está prohibido.</p>
+            </div>
+            <div><img src="https://cdn.baquianos.com/img/blog/2019/30/pozo-azul-9c4.jpg" alt="Pozos Azules"></div>
+        </div>
+
+        <div class="lugar">
+            <div>
+                <h3>Museo El Fósil</h3>
+                <p>Es uno de los espacios científicos más conocidos de la región. Allí se conserva el fósil de un Kronosaurus, un reptil marino que vivió hace aproximadamente 110 millones de años, cuando esta zona tenía condiciones muy diferentes a las actuales.</p>
+                <p>El museo también presenta otros fósiles del periodo Cretácico y permite comprender la importancia paleontológica de Villa de Leyva.</p>
+            </div>
+            <div><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/91/9f/67/velociraptor.jpg?w=700&h=400&s=1" alt="Exhibición relacionada con fósiles"></div>
+        </div>
+
+        <h2 id="naturaleza">Naturaleza y paisajes</h2>
+        <p>Los alrededores de Villa de Leyva ofrecen paisajes de montaña, cascadas, bosques, páramos y zonas secas. Estos son algunos de los lugares naturales más conocidos:</p>
+
+        <div class="lugar">
+            <div><img src="https://situr.boyaca.gov.co/wp-content/uploads/2017/06/5.jpg" alt="Santuario de Fauna y Flora Iguaque"></div>
+            <div>
+                <h3>Santuario de Fauna y Flora Iguaque</h3>
+                <p>Área protegida con bosques andinos, páramo y lagunas. Allí se encuentra la Laguna de Iguaque, importante en los relatos de origen de la cultura muisca. Antes de visitarlo, consulta las condiciones de ingreso y los senderos habilitados.</p>
+            </div>
+        </div>
+
+        <div class="lugar">
+            <div><img src="https://90gradosvilladeleyva.com/wp-content/uploads/2021/04/periquera-villa-de-leyva-2-1.jpg" alt="La Periquera"></div>
+            <div>
+                <h3>La Periquera</h3>
+                <p>Conjunto de cascadas y senderos en la zona rural, ideal para quienes disfrutan las caminatas y el contacto con la naturaleza. Se recomienda usar calzado adecuado y seguir las indicaciones del lugar.</p>
+            </div>
+        </div>
+
+        <div class="lugar">
+            <div><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Desierto_Villa_de_Leyva.jpg/960px-Desierto_Villa_de_Leyva.jpg?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=thumbnail" alt="Desierto de Villa de Leyva"></div>
+            <div>
+                <h3>Desierto de Villa de Leyva</h3>
+                <p>Es una zona de paisajes áridos y formaciones naturales que contrastan con las montañas verdes de los alrededores. Sus caminos permiten apreciar un entorno diferente y conocer otra cara del paisaje de la región.</p>
+            </div>
+        </div>
+
+        <div class="lugar">
+            <div><img src="https://situr.boyaca.gov.co/wp-content/uploads/2017/05/Mirador-el-santo-villa1.jpg" alt="Miradores y caminos rurales"></div>
+            <div>
+                <h3>Miradores y caminos rurales</h3>
+                <p>Desde distintos puntos rurales se pueden apreciar el valle, las montañas y el casco urbano. Algunas rutas permiten caminar o montar bicicleta, respetando siempre los caminos autorizados.</p>
+            </div>
+        </div>
+
+        <h2 id="gastronomia">Gastronomía y sabores de la región</h2>
+        <p>Haz clic en cada preparación para conocer sus características:</p>
+
+        <details>
+            <summary><strong>Arepas boyacenses</strong></summary>
+            <div style="display:flex; align-items:center; gap:20px; margin:20px 0;">
+                <div style="flex:1;">
+                    <strong>Ingredientes principales:</strong>
+                    <ul>
+                        <li>Harina de maíz.</li>
+                        <li>Cuajada o queso.</li>
+                        <li>Mantequilla.</li>
+                        <li>Azúcar.</li>
+                        <li>Leche.</li>
+                    </ul>
+                    <p style="text-align:justify">
+                        <strong>Preparación y características:</strong><br>
+                        Se preparan con una masa de maíz mezclada con queso y otros ingredientes. Se cocinan a la plancha hasta obtener una textura dorada por fuera y suave por dentro. Se caracterizan por su sabor ligeramente dulce combinado con el toque salado del queso.
+                    </p>
+                    <p style="text-align:justify">
+                        <strong>¿Cómo se consumen?</strong><br>
+                        Son ideales para el desayuno o las meriendas y suelen acompañarse con chocolate caliente, café o aguapanela.
+                    </p>
+                </div>
+                <div style="flex:1; text-align:center;">
+                    <img src="https://2.bp.blogspot.com/--EigcFh_zi0/WDN64BslttI/AAAAAAAADA4/EHRQcL-uX9oeMGmIWaVan6BQnJWCKMcCACLcB/s1600/Arepas%2BBoyacenses%2BSyS.jpg" alt="Arepas boyacenses" style="width:100%; max-width:350px; height:auto; border-radius:10px;">
+                </div>
+            </div>
+        </details>
+
+        <details>
+            <summary><strong>Cocido boyacense</strong></summary>
+            <div style="display:flex; align-items:center; gap:20px; margin:20px 0;">
+                <div style="flex:1;">
+                    <strong>Ingredientes principales:</strong>
+                    <ul>
+                        <li>Papa.</li>
+                        <li>Cubios, hibias y chuguas.</li>
+                        <li>Habas.</li>
+                        <li>Mazorca.</li>
+                        <li>Carne de res, cerdo y pollo.</li>
+                    </ul>
+                    <p style="text-align:justify">
+                        <strong>Preparación y características:</strong><br>
+                        Es uno de los platos más tradicionales de Boyacá. Se prepara cocinando lentamente diferentes tubérculos, verduras y carnes hasta integrar sus sabores. Se caracteriza por ser un plato abundante, nutritivo y representativo de la cocina campesina.
+                    </p>
+                    <p style="text-align:justify">
+                        <strong>¿Cómo se consume?</strong><br>
+                        Generalmente se sirve caliente como plato principal, especialmente en almuerzos familiares y restaurantes de comida típica.
+                    </p>
+                </div>
+                <div style="flex:1; text-align:center;">
+                    <img src="https://elrinconcolombiano.com/wp-content/uploads/2023/06/Receta-de-cocido-boyasense.jpg" alt="Cocido boyacense" style="width:100%; max-width:350px; height:auto; border-radius:10px;">
+                </div>
+            </div>
+        </details>
+
+        <details>
+            <summary><strong>Longaniza</strong></summary>
+            <div style="display:flex; align-items:center; gap:20px; margin:20px 0;">
+                <div style="flex:1;">
+                    <strong>Ingredientes principales:</strong>
+                    <ul>
+                        <li>Carne de cerdo.</li>
+                        <li>Ajo.</li>
+                        <li>Cebolla.</li>
+                        <li>Sal.</li>
+                        <li>Especias y condimentos.</li>
+                    </ul>
+                    <p style="text-align:justify">
+                        <strong>Preparación y características:</strong><br>
+                        Es un embutido elaborado con carne de cerdo condimentada y preparada en una tripa. Se cocina asada o frita y se caracteriza por su sabor intenso y su textura jugosa.
+                    </p>
+                    <p style="text-align:justify">
+                        <strong>¿Cómo se consume?</strong><br>
+                        Se sirve acompañada de papa, arepa, yuca o ensalada. Es una opción popular en establecimientos de comida tradicional.
+                    </p>
+                </div>
+                <div style="flex:1; text-align:center;">
+                    <img src="https://media.istockphoto.com/id/2219390137/es/foto/gastronom%C3%ADa-tradicional-boyacense-longaniza-t%C3%ADpica-de-sutamarchan.jpg?s=612x612&w=0&k=20&c=8CpqCucAhSzkTq2fN5wlvLd98l5K0QvNITf76--ZEjo=" alt="Longaniza" style="width:100%; max-width:350px; height:auto; border-radius:10px;">
+                </div>
+            </div>
+        </details>
+
+        <details>
+            <summary><strong>Mazamorra chiquita</strong></summary>
+            <div style="display:flex; align-items:center; gap:20px; margin:20px 0;">
+                <div style="flex:1;">
+                    <strong>Ingredientes principales:</strong>
+                    <ul>
+                        <li>Maíz.</li>
+                        <li>Papa.</li>
+                        <li>Habas.</li>
+                        <li>Arvejas.</li>
+                        <li>Fríjoles.</li>
+                        <li>Tallos y otras verduras.</li>
+                        <li>Carne, según la preparación.</li>
+                    </ul>
+                    <p style="text-align:justify">
+                        <strong>Preparación y características:</strong><br>
+                        Es una sopa tradicional de la cocina boyacense que se distingue por su consistencia espesa y la combinación de diferentes productos agrícolas. Sus ingredientes se cocinan hasta conseguir una preparación llena de sabores y texturas.
+                    </p>
+                    <p style="text-align:justify">
+                        <strong>¿Cómo se consume?</strong><br>
+                        Se sirve caliente, principalmente durante el almuerzo. Es un plato que representa las costumbres alimenticias de las familias campesinas de Boyacá.
+                    </p>
+                </div>
+                <div style="flex:1; text-align:center;">
+                    <img src="https://situr.boyaca.gov.co/wp-content/uploads/2021/05/Mazamorra-chiquitafoto-restaurante-brisas-boyacenses.jpg" alt="Mazamorra chiquita" style="width:100%; max-width:350px; height:auto; border-radius:10px;">
+                </div>
+            </div>
+        </details>
+
+        <details>
+            <summary><strong>Postres y dulces artesanales</strong></summary>
+            <div style="display:flex; align-items:center; gap:20px; margin:20px 0;">
+                <div style="flex:1;">
+                    <strong>Algunas variedades:</strong>
+                    <ul>
+                        <li>Brevas con arequipe.</li>
+                        <li>Panelitas de leche.</li>
+                        <li>Dulce de leche.</li>
+                        <li>Conservas de frutas.</li>
+                        <li>Bocadillos artesanales.</li>
+                    </ul>
+                    <p style="text-align:justify">
+                        <strong>Preparación y características:</strong><br>
+                        Son productos elaborados principalmente con leche, azúcar, frutas y otros ingredientes tradicionales. Se preparan mediante diferentes técnicas artesanales que permiten obtener sabores dulces y texturas variadas.
+                    </p>
+                    <p style="text-align:justify">
+                        <strong>¿Dónde se pueden encontrar?</strong><br>
+                        En Villa de Leyva se pueden disfrutar en cafeterías, panaderías, tiendas de productos artesanales y establecimientos gastronómicos.
+                    </p>
+                </div>
+                <div style="flex:1; text-align:center;">
+                    <img src="https://imagenes2.eltiempo.com/files/og_thumbnail/uploads/2021/03/11/604a9640b0e1c.jpeg" alt="Postres y dulces artesanales" style="width:100%; max-width:350px; height:auto; border-radius:10px;">
+                </div>
+            </div>
+        </details>
+
+        <h2 id="cultura">Cultura, tradiciones y festivales</h2>
+        <p>Las tradiciones de Villa de Leyva reflejan la herencia muisca, la época colonial y las costumbres campesinas de Boyacá. A lo largo del año se realizan festivales y actividades artísticas que reúnen a la comunidad y a los visitantes.</p>
+
+        <h3>Festivales y celebraciones</h3>
+
+        <ul>
+            <li>
+                <div style="display:flex; align-items:center; gap:20px; margin-bottom:20px;">
+                    <div style="flex:1;">
+                        <strong>Festival del Viento y las Cometas:</strong>
+                        <p style="text-align:justify">
+                            Tradicionalmente se realiza en agosto y reúne a visitantes y participantes que disfrutan de elevar cometas de diferentes formas, colores y tamaños. Durante el festival se realizan competencias de vuelo, exhibiciones de cometas gigantes y actividades recreativas. Es una celebración que aprovecha los fuertes vientos de la región y llena de color el cielo de Villa de Leyva.
+                        </p>
+                    </div>
+                    <div style="flex:1;">
+                        <img src="https://imagenes2.eltiempo.com/files/image_600_455/uploads/2025/07/31/688b8b62581e5.jpeg" alt="Festival del Viento y las Cometas" style="width:100%; max-width:300px; height:auto; border-radius:10px;">
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <div style="display:flex; align-items:center; gap:20px; margin-bottom:20px;">
+                    <div style="flex:1;">
+                        <strong>Festival de Luces:</strong>
+                        <p style="text-align:justify">
+                            Se celebra en diciembre y es uno de los eventos más representativos del municipio. Durante esta festividad, las calles, balcones y fachadas se iluminan con miles de luces, creando un ambiente especial. También se realizan espectáculos de juegos pirotécnicos, presentaciones culturales y actividades para disfrutar en familia.
+                        </p>
+                    </div>
+                    <div style="flex:1;">
+                        <img src="https://viajala.com.co/news/wp-content/uploads/2025/12/Festival-de-Luces-Villa-de-Leyva-2025.jpg" alt="Festival de Luces" style="width:100%; max-width:300px; height:auto; border-radius:10px;">
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <div style="display:flex; align-items:center; gap:20px; margin-bottom:20px;">
+                    <div style="flex:1;">
+                        <strong>Festival de Astronomía:</strong>
+                        <p style="text-align:justify">
+                            Es un evento dedicado a la observación y el conocimiento del universo. Reúne a aficionados, estudiantes y expertos que participan en charlas, talleres y actividades educativas. Además, se realizan jornadas de observación con telescopios para apreciar estrellas, planetas y otros cuerpos celestes, aprovechando las condiciones del cielo de Villa de Leyva.
+                        </p>
+                    </div>
+                    <div style="flex:1;">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK65v6EO1Ua5DQ7u6HQM6rswjAHoh_JPtGrdrbOpZY03ucx0y49UZD4ehp&s=10" alt="Festival de Astronomía" style="width:100%; max-width:300px; height:auto; border-radius:10px;">
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <div style="display:flex; align-items:center; gap:20px; margin-bottom:20px;">
+                    <div style="flex:1;">
+                        <strong>Semana Santa:</strong>
+                        <p style="text-align:justify">
+                            Es una celebración religiosa que reúne a habitantes y visitantes durante varios días. Se realizan procesiones, misas y diferentes actividades relacionadas con la tradición católica. Las calles y templos del municipio se convierten en espacios de encuentro y reflexión, conservando las costumbres religiosas y culturales de la región.
+                        </p>
+                    </div>
+                    <div style="flex:1;">
+                        <img src="https://entrecejayceja.co/wp-content/uploads/2025/04/semana-santa-villa-de-leyva-boyaca-1024x488.webp" alt="Semana Santa" style="width:100%; max-width:300px; height:auto; border-radius:10px;">
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <p class="nota">
+            Las fechas pueden cambiar cada año. Consulta la programación antes de tu visita.
+        </p>
+
+        <h3>Artesanías y expresiones artísticas</h3>
+
+        <ul>
+            <li>
+                <div style="display:flex; align-items:center; gap:20px; margin-bottom:20px;">
+                    <div style="flex:1;">
+                        <p style="text-align:justify">
+                            En el municipio se encuentran artesanías en cerámica, arcilla, tejidos y madera. También hay talleres, galerías y espacios donde se exhiben obras de artistas locales.
+                        </p>
+                    </div>
+                    <div style="flex:1;">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzaaORozQH5EjVsIb_7yg87L7U8cYKdDshzumCnkP4y-Un8Ug9EWZn7cIi&s=10" alt="Artesanías de Villa de Leyva" style="width:100%; max-width:300px; height:auto; border-radius:10px;">
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <h2 id="actividades">Entonces... ¿qué actividades puedo hacer en Villa de Leyva?</h2>
+        <ul>
+            <li>Recorrer el centro histórico y conocer sus museos.</li>
+            <li>Visitar senderos, cascadas y otros espacios naturales autorizados.</li>
+            <li>Realizar recorridos en bicicleta por rutas rurales.</li>
+            <li>Probar platos típicos y comprar productos artesanales.</li>
+            <li>Participar en festivales, exposiciones y actividades culturales.</li>
+            <li>Observar el cielo nocturno durante las actividades de astronomía.</li>
+        </ul>
+
+        <h2 id="visita">Información útil para visitar Villa de Leyva</h2>
+
+        <h3>¿Dónde queda?</h3>
+        <p>Villa de Leyva está ubicada en el departamento de Boyacá, en la provincia de Ricaurte, sobre la cordillera Oriental de Colombia. Se encuentra aproximadamente a 37 kilómetros de Tunja y a unos 165-175 kilómetros de Bogotá, dependiendo de la ruta utilizada.</p>
+
+        <div style="text-align: center;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15882.110158866672!2d-73.53735831753545!3d5.636520763613746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e41d70e3c78a119%3A0x63446b78661193dd!2sVilla%20de%20Leyva%2C%20Boyac%C3%A1!5e0!3m2!1ses-419!2sco!4v1795548539263!5m2!1ses-419!2sco" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+
+        <h3>¿Cómo llegar?</h3>
+        <p>Desde Bogotá se puede viajar por carretera en dirección a Tunja y continuar hacia Villa de Leyva. Desde Tunja existen rutas terrestres que conectan con el municipio. También es posible llegar en vehículo particular, transporte público o mediante recorridos turísticos. Los tiempos de viaje pueden variar según el tráfico, el clima y el estado de las vías.</p>
+
+        <h3>Clima y qué llevar</h3>
+        <p>El municipio tiene un clima templado de montaña, pero las condiciones pueden cambiar entre el día y la noche y según la zona que se visite. En el casco urbano suele sentirse un ambiente más cálido durante las horas de sol, mientras que en las zonas altas y de páramo puede hacer bastante frío.</p>
+        <ul>
+            <li>Lleva ropa cómoda y una chaqueta para la noche o los recorridos por zonas altas.</li>
+            <li>Utiliza zapatos cómodos, especialmente para caminar por calles empedradas y senderos.</li>
+            <li>Usa protector solar, gorra o sombrero y gafas de sol.</li>
+            <li>Lleva agua durante las caminatas y evita exponerte demasiado tiempo al sol.</li>
+            <li>Consulta el pronóstico del tiempo antes de realizar actividades al aire libre.</li>
+        </ul>
+
+        <h3>Recomendaciones para cuidar el municipio</h3>
+        <ul>
+            <li>No arrojes basura en calles, parques, ríos, senderos ni zonas naturales.</li>
+            <li>Respeta los monumentos, las construcciones antiguas y los sitios arqueológicos.</li>
+            <li>No extraigas fósiles, piedras, plantas ni otros elementos naturales o patrimoniales.</li>
+            <li>Respeta las indicaciones de los museos, parques y atractivos turísticos.</li>
+            <li>Cuida la tranquilidad de los residentes y respeta sus costumbres.</li>
+            <li>Contrata servicios turísticos autorizados cuando la actividad lo requiera.</li>
+            <li>Verifica horarios, tarifas, disponibilidad y condiciones de ingreso antes de visitar cada lugar.</li>
+        </ul>
+
+   
+
+        <div class="centrado">
+            <button class="boton-chat" id="abrir-chatbot" type="button">
+                💬 Habla con Villadito, nuestro chatbot
+            </button>
+        </div>
+
+        <h2>Conoce más de Villa de Leyva</h2>
+        <p>Para consultar información turística, cultural y oficial, puedes visitar los siguientes sitios:</p>
+        <ul>
+            <li><a href="https://www.villadeleyva-boyaca.gov.co/" target="_blank">Alcaldía de Villa de Leyva</a></li>
+            <li><a href="https://situr.boyaca.gov.co/ricaurte/municipio-de-villa-de-leyva/" target="_blank">Sistema de Información Turística de Boyacá</a></li>
+            <li><a href="https://colombia.travel/es/villa-de-leyva" target="_blank">Colombia Travel - Villa de Leyva</a></li>
+              </ul>
+
+        <p class="centrado"><a class="boton" href="#inicio">Volver al inicio ↑</a></p>
+    </main>
+
+    <footer id="final">
+        <p class="centrado">&copy;Todos los derechos reservados</p>
+        <p class="centrado">Creado por: María Fernanda Tamara Moreno - 2026</p>
+        <p class="centrado">¡Gracias por conocer las maravillas de Villa de Leyva!</p>
+    </footer>
+
+    <!-- CONEXIÓN CON EL CHATBOT VILLADITO -->
+    <script type="module">
+        import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0/dist/web.js';
+
+        Typebot.initPopup({
+            typebot: "my-typebot-go09xet"
+        });
+
+        document.getElementById("abrir-chatbot").addEventListener("click", () => {
+            Typebot.open();
+        });
+    </script>
+
+</body>
+</html>
